@@ -1,0 +1,106 @@
+#phone-numpad {
+	margin-top: 22px;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+@media only screen and (max-height: 1024px) {
+	/* position just below menu */
+	#numpad-wrap {
+		top: 200px !important;
+	}
+}
+/* @media only screen and (max-height: 1024px) {
+	#numpad-wrap {
+		top: 200px !important;
+	}
+} */
+
+/* [BACKGROUND] */
+#numpad-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+	display: table;
+}
+#numpad-back.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* [NUMPAD] */
+#numpad-wrap, #numpad-display {
+  /* FONT - REMOVE THIS TO FOLLOW YOUR CURRENT THEME */
+  font-family: 'Arial', sans-serif;
+}
+
+#numpad-wrap {
+	position: absolute;
+	max-height: 426px;
+  max-width: 256px;	/* 320 * .8 */
+	top: calc(50% - 360px);	/* position near top of page */
+	left: calc(50% - 128px);	/* 256/2 -> center horizontally */
+  padding: 10px;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+}
+
+/* display wrap */
+#display-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin-bottom: 10px;
+}
+/* [NUMBER DISPLAY] */
+#numpad-display {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 5px;
+	margin-left: 10%;
+  font-size: 2em;
+  text-align: center;
+	border: none !important;
+	background: none !important;
+}
+/* delete button */
+.top-btn {
+	width: 10%;
+	margin-bottom: 10px;
+	padding-top: 5px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+/* [NUMBER BUTTONS] */
+#numpad-btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	margin: 0 auto;
+}
+.numpad-btn {
+  box-sizing: border-box;
+  width: 33.3333%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  background: #444;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+.numpad-btn.ok {
+  background: #1FA83A;
+  border: 1px solid #1FC72D;
+	width: 100%;
+}
+.numpad-btn:hover,
+.top-btn:hover {
+  cursor: pointer;
+}
